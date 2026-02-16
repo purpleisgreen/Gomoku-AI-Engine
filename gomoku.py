@@ -1,4 +1,3 @@
-#DO NOT MODIFY THE FUNCTIONS BELOW
 def print_board(board):
 #prints out the Gomoku board
     s = "*"
@@ -99,7 +98,6 @@ def analysis(board):
             print("Open rows of length %d: %d" % (i, open))
             print("Semi-open rows of length %d: %d" % (i, semi_open))
 
-#WRITE THE FUNCTIONS BELOW
 def is_empty(board): #is called on by prewritten functions
     rows = len(board)
     columns = len(board[0])
@@ -111,7 +109,7 @@ def is_empty(board): #is called on by prewritten functions
                 return False
     return True
 
-def is_bounded(board, y_end, x_end, length, d_y, d_x): #not called on by prewritten functions
+def is_bounded(board, y_end, x_end, length, d_y, d_x):
     colour = board[y_end][x_end]
     boardLength = len(board)
     xCoorEndBarrier = x_end + d_x
@@ -146,7 +144,7 @@ def is_bounded(board, y_end, x_end, length, d_y, d_x): #not called on by prewrit
         return "CLOSED"
     return "SEMIOPEN" ##pas
 
-def detect_row(board, col, y_start, x_start, length, d_y, d_x): #not called on by prewritten functions
+def detect_row(board, col, y_start, x_start, length, d_y, d_x): 
     result = [0, 0] #open, semi open
     boardLength = len(board)
     if length > 5:
@@ -480,4 +478,5 @@ def some_tests():
 #MAIN CODE
 if __name__ == '__main__':
     some_tests()
+
 

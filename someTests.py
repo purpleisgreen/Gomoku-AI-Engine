@@ -1,8 +1,3 @@
-"""
-You should complete every incomplete function,
-and add more functions and variables as needed.
-"""
-
 def make_empty_board(sz):
     board = []
     for i in range(sz):
@@ -267,3 +262,4 @@ def some_tests():
                 x_start = x_start + d_x
                 y_start = y_start + d_y
         return tuple(result)
+
